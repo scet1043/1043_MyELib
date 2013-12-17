@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="MyELib" Class="myelibDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=HP-PC;Initial Catalog=MyELib;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="MyELibConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.book_mast" Member="book_masts">
+    <Type Name="book_mast">
+      <Column Name="bk_id" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="bk_name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="bk_auther" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="bk_publisher" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="bk_desc" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="bk_stock" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="bk_avail" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Association Name="book_mast_req_mast" Member="req_masts" ThisKey="bk_id" OtherKey="bk_id" Type="req_mast" />
+      <Association Name="book_mast_trans_mast" Member="trans_masts" ThisKey="bk_id" OtherKey="bk_id" Type="trans_mast" />
+    </Type>
+  </Table>
+  <Table Name="dbo.bookcopy_mast" Member="bookcopy_masts">
+    <Type Name="bookcopy_mast">
+      <Column Name="bk_id" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="bk_seqno" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="bk_avail" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.notice_mast" Member="notice_masts">
+    <Type Name="notice_mast">
+      <Column Name="stud_libcard_no" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="bk_id" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ntc_date_time" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[req-mast]" Member="req_masts">
+    <Type Name="req_mast">
+      <Column Name="req_id" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="bk_id" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="stud_enroll_no" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="stud_libcard_no" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="req_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="req_status" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="book_mast_req_mast" Member="book_mast" ThisKey="bk_id" OtherKey="bk_id" Type="book_mast" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.stud_mast" Member="stud_masts">
+    <Type Name="stud_mast">
+      <Column Name="stud_enroll_no" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="stud_libcard_no" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="stud_fname" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="stud_mname" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="stud_lname" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="stud_class" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="stud_dept" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="stud_email" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="stud_mob_no" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ebook_mast" Member="ebook_masts">
+    <Type Name="ebook_mast">
+      <Column Name="Ebk_id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Ebk_name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Ebk_coverimg" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Ebk_pdfpath" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Ebk_publisher" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Ebk_author" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.trans_mast" Member="trans_masts">
+    <Type Name="trans_mast">
+      <Column Name="trans_id" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="bk_id" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="bk_seq_id" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="stud_libcard_no" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="trans_type" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="issue_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="return_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="book_mast_trans_mast" Member="book_mast" ThisKey="bk_id" OtherKey="bk_id" Type="book_mast" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

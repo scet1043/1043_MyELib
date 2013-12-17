@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+<TableLayout
+	android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    
+	<TableRow android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="right">
+
+		<Button
+		    android:id="@+id/btnlogout"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:background="#00000000"
+		    android:gravity="right"
+		    android:text="LogOut"
+		     />
+
+    </TableRow>
+	<TableRow android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+		<EditText
+		    android:id="@+id/editSearch"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"		
+		    android:hint="Enter Search Keyword" >
+
+		   
+		</EditText>
+
+		<Button
+		    android:id="@+id/btnGo"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="Go" 
+		    android:layout_gravity="right"/>
+       
+	</TableRow>
+	</TableLayout>
+
+
+
+	<TableLayout
+	android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+		
+	<TableRow android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+		<TextView
+		    android:id="@+id/textView1"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="Book List"
+		    android:gravity="center"
+		    android:textAppearance="?android:attr/textAppearanceLarge" />
+     
+	</TableRow>
+	
+	<TableRow android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+		<ListView
+		    android:id="@+id/booklist"
+		    android:layout_width="wrap_content"
+		    android:layout_height="fill_parent" 
+		    android:gravity="center">
+		</ListView>
+         
+	</TableRow>
+	
+</TableLayout>
+</LinearLayout>

@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="stud_enroll_no" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="stud_libcard_no" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BkDetail_ID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="bk_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BkDetail_IDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BkDetail_IDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BkDetail_Name">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="bk_name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BkDetail_NameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BkDetail_NameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BkDetail_Auther">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="bk_auther" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BkDetail_AutherResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BkDetail_AutherResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BkDetail_Publisher">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="bk_publisher" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BkDetail_PublisherResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BkDetail_PublisherResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insert">
+        <s:complexType />
+      </s:element>
+      <s:element name="InsertResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Stud_Detail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="stud_libcard_no" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Stud_DetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Stud_DetailResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="LoginSoapIn">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="LoginSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="BkDetail_IDSoapIn">
+    <wsdl:part name="parameters" element="tns:BkDetail_ID" />
+  </wsdl:message>
+  <wsdl:message name="BkDetail_IDSoapOut">
+    <wsdl:part name="parameters" element="tns:BkDetail_IDResponse" />
+  </wsdl:message>
+  <wsdl:message name="BkDetail_NameSoapIn">
+    <wsdl:part name="parameters" element="tns:BkDetail_Name" />
+  </wsdl:message>
+  <wsdl:message name="BkDetail_NameSoapOut">
+    <wsdl:part name="parameters" element="tns:BkDetail_NameResponse" />
+  </wsdl:message>
+  <wsdl:message name="BkDetail_AutherSoapIn">
+    <wsdl:part name="parameters" element="tns:BkDetail_Auther" />
+  </wsdl:message>
+  <wsdl:message name="BkDetail_AutherSoapOut">
+    <wsdl:part name="parameters" element="tns:BkDetail_AutherResponse" />
+  </wsdl:message>
+  <wsdl:message name="BkDetail_PublisherSoapIn">
+    <wsdl:part name="parameters" element="tns:BkDetail_Publisher" />
+  </wsdl:message>
+  <wsdl:message name="BkDetail_PublisherSoapOut">
+    <wsdl:part name="parameters" element="tns:BkDetail_PublisherResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertSoapIn">
+    <wsdl:part name="parameters" element="tns:Insert" />
+  </wsdl:message>
+  <wsdl:message name="InsertSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="Stud_DetailSoapIn">
+    <wsdl:part name="parameters" element="tns:Stud_Detail" />
+  </wsdl:message>
+  <wsdl:message name="Stud_DetailSoapOut">
+    <wsdl:part name="parameters" element="tns:Stud_DetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginHttpGetIn">
+    <wsdl:part name="stud_enroll_no" type="s:string" />
+    <wsdl:part name="stud_libcard_no" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LoginHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="BkDetail_IDHttpGetIn">
+    <wsdl:part name="bk_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BkDetail_IDHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="BkDetail_NameHttpGetIn">
+    <wsdl:part name="bk_name" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BkDetail_NameHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="BkDetail_AutherHttpGetIn">
+    <wsdl:part name="bk_auther" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BkDetail_AutherHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="BkDetail_PublisherHttpGetIn">
+    <wsdl:part name="bk_publisher" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BkDetail_PublisherHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertHttpGetIn" />
+  <wsdl:message name="InsertHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Stud_DetailHttpGetIn">
+    <wsdl:part name="stud_libcard_no" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Stud_DetailHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="LoginHttpPostIn">
+    <wsdl:part name="stud_enroll_no" type="s:string" />
+    <wsdl:part name="stud_libcard_no" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LoginHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="BkDetail_IDHttpPostIn">
+    <wsdl:part name="bk_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BkDetail_IDHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="BkDetail_NameHttpPostIn">
+    <wsdl:part name="bk_name" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BkDetail_NameHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="BkDetail_AutherHttpPostIn">
+    <wsdl:part name="bk_auther" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BkDetail_AutherHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="BkDetail_PublisherHttpPostIn">
+    <wsdl:part name="bk_publisher" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BkDetail_PublisherHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertHttpPostIn" />
+  <wsdl:message name="InsertHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Stud_DetailHttpPostIn">
+    <wsdl:part name="stud_libcard_no" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Stud_DetailHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="Login">
+      <wsdl:input message="tns:LoginSoapIn" />
+      <wsdl:output message="tns:LoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BkDetail_ID">
+      <wsdl:input message="tns:BkDetail_IDSoapIn" />
+      <wsdl:output message="tns:BkDetail_IDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BkDetail_Name">
+      <wsdl:input message="tns:BkDetail_NameSoapIn" />
+      <wsdl:output message="tns:BkDetail_NameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BkDetail_Auther">
+      <wsdl:input message="tns:BkDetail_AutherSoapIn" />
+      <wsdl:output message="tns:BkDetail_AutherSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BkDetail_Publisher">
+      <wsdl:input message="tns:BkDetail_PublisherSoapIn" />
+      <wsdl:output message="tns:BkDetail_PublisherSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Insert">
+      <wsdl:input message="tns:InsertSoapIn" />
+      <wsdl:output message="tns:InsertSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Stud_Detail">
+      <wsdl:input message="tns:Stud_DetailSoapIn" />
+      <wsdl:output message="tns:Stud_DetailSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ServiceHttpGet">
+    <wsdl:operation name="Login">
+      <wsdl:input message="tns:LoginHttpGetIn" />
+      <wsdl:output message="tns:LoginHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BkDetail_ID">
+      <wsdl:input message="tns:BkDetail_IDHttpGetIn" />
+      <wsdl:output message="tns:BkDetail_IDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BkDetail_Name">
+      <wsdl:input message="tns:BkDetail_NameHttpGetIn" />
+      <wsdl:output message="tns:BkDetail_NameHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BkDetail_Auther">
+      <wsdl:input message="tns:BkDetail_AutherHttpGetIn" />
+      <wsdl:output message="tns:BkDetail_AutherHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BkDetail_Publisher">
+      <wsdl:input message="tns:BkDetail_PublisherHttpGetIn" />
+      <wsdl:output message="tns:BkDetail_PublisherHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Insert">
+      <wsdl:input message="tns:InsertHttpGetIn" />
+      <wsdl:output message="tns:InsertHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Stud_Detail">
+      <wsdl:input message="tns:Stud_DetailHttpGetIn" />
+      <wsdl:output message="tns:Stud_DetailHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ServiceHttpPost">
+    <wsdl:operation name="Login">
+      <wsdl:input message="tns:LoginHttpPostIn" />
+      <wsdl:output message="tns:LoginHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BkDetail_ID">
+      <wsdl:input message="tns:BkDetail_IDHttpPostIn" />
+      <wsdl:output message="tns:BkDetail_IDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BkDetail_Name">
+      <wsdl:input message="tns:BkDetail_NameHttpPostIn" />
+      <wsdl:output message="tns:BkDetail_NameHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BkDetail_Auther">
+      <wsdl:input message="tns:BkDetail_AutherHttpPostIn" />
+      <wsdl:output message="tns:BkDetail_AutherHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BkDetail_Publisher">
+      <wsdl:input message="tns:BkDetail_PublisherHttpPostIn" />
+      <wsdl:output message="tns:BkDetail_PublisherHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Insert">
+      <wsdl:input message="tns:InsertHttpPostIn" />
+      <wsdl:output message="tns:InsertHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Stud_Detail">
+      <wsdl:input message="tns:Stud_DetailHttpPostIn" />
+      <wsdl:output message="tns:Stud_DetailHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BkDetail_ID">
+      <soap:operation soapAction="http://tempuri.org/BkDetail_ID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BkDetail_Name">
+      <soap:operation soapAction="http://tempuri.org/BkDetail_Name" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BkDetail_Auther">
+      <soap:operation soapAction="http://tempuri.org/BkDetail_Auther" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BkDetail_Publisher">
+      <soap:operation soapAction="http://tempuri.org/BkDetail_Publisher" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert">
+      <soap:operation soapAction="http://tempuri.org/Insert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Stud_Detail">
+      <soap:operation soapAction="http://tempuri.org/Stud_Detail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Login">
+      <soap12:operation soapAction="http://tempuri.org/Login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BkDetail_ID">
+      <soap12:operation soapAction="http://tempuri.org/BkDetail_ID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BkDetail_Name">
+      <soap12:operation soapAction="http://tempuri.org/BkDetail_Name" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BkDetail_Auther">
+      <soap12:operation soapAction="http://tempuri.org/BkDetail_Auther" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BkDetail_Publisher">
+      <soap12:operation soapAction="http://tempuri.org/BkDetail_Publisher" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert">
+      <soap12:operation soapAction="http://tempuri.org/Insert" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Stud_Detail">
+      <soap12:operation soapAction="http://tempuri.org/Stud_Detail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceHttpGet" type="tns:ServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="Login">
+      <http:operation location="/Login" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BkDetail_ID">
+      <http:operation location="/BkDetail_ID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BkDetail_Name">
+      <http:operation location="/BkDetail_Name" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BkDetail_Auther">
+      <http:operation location="/BkDetail_Auther" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BkDetail_Publisher">
+      <http:operation location="/BkDetail_Publisher" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert">
+      <http:operation location="/Insert" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Stud_Detail">
+      <http:operation location="/Stud_Detail" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceHttpPost" type="tns:ServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="Login">
+      <http:operation location="/Login" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BkDetail_ID">
+      <http:operation location="/BkDetail_ID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BkDetail_Name">
+      <http:operation location="/BkDetail_Name" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BkDetail_Auther">
+      <http:operation location="/BkDetail_Auther" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BkDetail_Publisher">
+      <http:operation location="/BkDetail_Publisher" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert">
+      <http:operation location="/Insert" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Stud_Detail">
+      <http:operation location="/Stud_Detail" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://localhost:1047/MyELibwebservice/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://localhost:1047/MyELibwebservice/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceHttpGet" binding="tns:ServiceHttpGet">
+      <http:address location="http://localhost:1047/MyELibwebservice/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceHttpPost" binding="tns:ServiceHttpPost">
+      <http:address location="http://localhost:1047/MyELibwebservice/Service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,61 @@
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="4dp"
+        android:layout_y="6dp"
+        android:text="Welcome.." />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="4dp"
+        android:layout_y="54dp"
+        android:text="LogIn here by 2 ways :" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="6dp"
+        android:layout_y="90dp"
+        android:text="1. Enrollment Id and Library Card ID" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:layout_x="15dp"
+            android:layout_y="120dp"
+            android:text="LogIn" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="6dp"
+        android:layout_y="180dp"
+        android:text="2. Scan Barcode on your Library Card" />
+
+       <Button 
+           android:id="@+id/button2"
+           android:layout_width="290dp"
+           android:layout_height="wrap_content"
+           android:layout_x="15dp"
+           android:layout_y="210dp"
+           android:text="Scan" />
+
+    <TextView
+        android:id="@+id/TextView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="3dp"
+        android:layout_y="306dp"
+        android:text="NOTE: Barcode may not work on some devices because of different camera configuration." />
+
+</AbsoluteLayout>

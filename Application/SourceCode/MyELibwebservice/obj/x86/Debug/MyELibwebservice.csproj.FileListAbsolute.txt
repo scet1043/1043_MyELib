@@ -1,0 +1,1 @@
+G:\webservices\MyELibwebservice\obj\x86\Debug\ResolveAssemblyReference.cache

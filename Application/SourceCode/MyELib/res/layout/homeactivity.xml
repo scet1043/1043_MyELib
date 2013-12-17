@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:id="@+id/linlayout">"
+
+<TableLayout
+	android:layout_width="match_parent"
+    android:layout_height="wrap_content">t
+    
+	<TableRow android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="right">
+
+		<Button
+		    android:id="@+id/btnlogout"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:background="#00000000"
+		    android:gravity="right"
+		    android:text="LogOut" />
+
+    </TableRow>
+    	<TableRow android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+		<TextView
+		    android:id="@+id/textView1"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="Lib. Card ID: "
+		    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+		<TextView
+		    android:id="@+id/txtHome1"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="TextView" />
+
+	</TableRow>
+		<TableRow android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+		<TextView
+		    android:id="@+id/textView2"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="Enrollment No.: "
+		    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+		<TextView
+		    android:id="@+id/txtHome2"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="TextView" />
+
+	</TableRow>
+	<TableRow android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+		<TextView
+		    android:id="@+id/textView3"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="Student Name: "
+		    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+		<TextView
+		    android:id="@+id/txtHome3"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="TextView" />
+
+	</TableRow>
+	
+	<TableRow android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+		<TextView
+		    android:id="@+id/textView4"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="Depertment: "
+		    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+		<TextView
+		    android:id="@+id/txtHome4"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="TextView" />
+
+	</TableRow>
+	
+	<TableRow android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+		<TextView
+		    android:id="@+id/textView5"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="Class: " 
+		    android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+		<TextView
+		    android:id="@+id/txtHome5"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="TextView" />
+
+	</TableRow>
+		<TableRow android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+		<TextView
+		    android:id="@+id/textView6"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="EmailID: "
+		    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+		<TextView
+		    android:id="@+id/txtHome6"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="TextView" />
+
+	</TableRow>
+		<TableRow android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+		<TextView
+		    android:id="@+id/textView7"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="Mobile No.: "
+		    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+		<TextView
+		    android:id="@+id/txtHome7"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="TextView" />
+
+	</TableRow>
+	
+	<TableRow android:layout_width="match_parent" 
+	android:layout_height="match_parent"
+	android:gravity="center">
+	
+	</TableRow>
+	
+	
+</TableLayout> 
+
+	    <TableLayout
+			android:layout_width="match_parent"
+    		android:layout_height="wrap_content"
+    		android:layout_marginTop="20dp">
+	
+	<TableRow android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal">
+	<TextView
+		    android:id="@+id/textView11"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:text="Issued Book List"
+		    android:gravity="center_horizontal"
+		    android:textAppearance="?android:attr/textAppearanceLarge" 
+		    android:textStyle="bold"/>
+	</TableRow>  
+	
+	<TableRow android:layout_width="match_parent"
+    android:layout_height="match_parent">   
+
+		<ListView
+		    android:id="@+id/booklist"
+		    android:layout_width="wrap_content"
+		    android:layout_height="fill_parent" 
+		    android:layout_gravity="center"
+		    android:gravity="center">
+		</ListView>
+</TableRow>
+
+ </TableLayout> 
+</LinearLayout>

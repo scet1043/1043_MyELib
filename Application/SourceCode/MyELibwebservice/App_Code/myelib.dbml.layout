@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="myelib">
+  <DataContextMoniker Name="/myelibDataContext" />
+  <nestedChildShapes>
+    <classShape Id="2cfe0e3e-59ba-4401-b753-8b1db2f05926" absoluteBounds="3.625, 0.5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/myelibDataContext/book_mast" />
+      <nestedChildShapes>
+        <elementListCompartment Id="450696a1-cb68-4923-8502-bbd12dbf673d" absoluteBounds="3.64, 0.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0cb0a6ed-aa47-4ee8-8dc3-31ae890bfbbc" absoluteBounds="4.875, 3.25, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/myelibDataContext/bookcopy_mast" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5cec0016-7765-48b4-89ba-264426cec5a5" absoluteBounds="4.89, 3.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a985650d-ab22-463e-936e-9803fcd79f28" absoluteBounds="2.25, 3, 2, 1.3862939453124996">
+      <DataClassMoniker Name="/myelibDataContext/notice_mast" />
+      <nestedChildShapes>
+        <elementListCompartment Id="db184aa5-7420-4e49-939d-dc60fee47e8e" absoluteBounds="2.265, 3.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8a57ce77-c923-4721-bd43-cbbdefdc1ef9" absoluteBounds="0.625, 0.875, 2, 1.9631982421875">
+      <DataClassMoniker Name="/myelibDataContext/req_mast" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2fa878a6-479f-4ca7-8d12-2d61470d8f26" absoluteBounds="0.64, 1.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.625 : 1.76524983723958); (2.625 : 1.76524983723958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/myelibDataContext/book_mast/book_mast_req_mast" />
+      <nodes>
+        <classShapeMoniker Id="2cfe0e3e-59ba-4401-b753-8b1db2f05926" />
+        <classShapeMoniker Id="8a57ce77-c923-4721-bd43-cbbdefdc1ef9" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="0ebd551a-ad5d-4625-a2dd-c2f5ece4a22d" absoluteBounds="6, 0.5, 2, 2.5401025390625">
+      <DataClassMoniker Name="/myelibDataContext/stud_mast" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a6f3377b-6287-4471-8bf8-b2e319293cc1" absoluteBounds="6.015, 0.96, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a65e3d6f-060e-452b-8902-30ac2b85d87d" absoluteBounds="1.625, 4.75, 2, 1.9631982421875">
+      <DataClassMoniker Name="/myelibDataContext/ebook_mast" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8f6ff92f-2499-4e7b-864f-3868b89475ae" absoluteBounds="1.6400000000000001, 5.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="638b36dd-53b3-4805-b2d9-1495e50bfea5" absoluteBounds="8.125, 4.25, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/myelibDataContext/trans_mast" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dd13da7d-98ba-4600-a2ce-385b39700262" absoluteBounds="8.14, 4.71, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.5625 : 2.65549967447917); (4.5625 : 5.64829752604167); (8.125 : 5.64829752604167)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/myelibDataContext/book_mast/book_mast_trans_mast" />
+      <nodes>
+        <classShapeMoniker Id="2cfe0e3e-59ba-4401-b753-8b1db2f05926" />
+        <classShapeMoniker Id="638b36dd-53b3-4805-b2d9-1495e50bfea5" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
